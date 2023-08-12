@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+   >
+
+
+    <Button
+        android:id="@+id/btn_signin_google"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:background="@drawable/custom_button_google"
+        android:drawableStart="@drawable/google"
+        android:elevation="15dp"
+        android:paddingStart="32dp"
+        android:text="@string/fui_sign_in_with_google"
+        android:layout_marginBottom="16dp"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btn_signin_email"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+       />
+
+    <Button
+        android:id="@+id/btn_signin_email"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:background="@drawable/custom_button_email"
+        android:drawableStart="@drawable/email"
+        android:elevation="15dp"
+        android:paddingStart="32dp"
+        android:layout_marginBottom="32dp"
+        android:text="@string/fui_sign_in_with_email"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/btn_signin_google"
+        app:layout_constraintStart_toStartOf="@+id/btn_signin_google" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:elevation="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/map" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <!--Data item that holds the reminder details-->
+        <variable
+            name="reminderDataItem"
+            type="com.udacity.project4.locationreminders.reminderslist.ReminderDataItem" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+
+        android:orientation="vertical"
+        tools:context=".locationreminders.ReminderDescriptionActivity">
+
+        <ImageView
+            android:id="@+id/iv_destination"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/destination" />
+
+        <View
+            android:id="@+id/view_destination"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="64dp"
+            android:backgroundTint="@android:color/holo_green_light"
+            android:background="@drawable/custom_button_email"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_destination_message" />
+
+        <TextView
+            android:id="@+id/tv_reminder_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/archivo_bold"
+            android:text="Reminder Title:"
+            android:textColor="#373535"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/view_destination"
+            app:layout_constraintTop_toTopOf="@+id/view_destination" />
+
+        <TextView
+            android:id="@+id/tv_reminder_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/archivo_bold"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@{reminderDataItem.title}"
+            app:layout_constraintEnd_toEndOf="@+id/view_destination"
+            app:layout_constraintStart_toStartOf="@+id/view_destination"
+            app:layout_constraintTop_toBottomOf="@+id/tv_reminder_title_text"
+            tools:text="Tahrir Square" />
+
+        <TextView
+            android:id="@+id/tv_reminder_description_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="24dp"
+            android:fontFamily="@font/archivo_bold"
+            android:text="Reminder Description:"
+            android:textColor="#373535"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/view_destination"
+            app:layout_constraintTop_toBottomOf="@+id/tv_reminder_title" />
+
+        <TextView
+            android:id="@+id/tv_reminder_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/archivo_bold"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@{reminderDataItem.description}"
+            app:layout_constraintEnd_toEndOf="@+id/view_destination"
+            app:layout_constraintStart_toStartOf="@+id/view_destination"
+            app:layout_constraintTop_toBottomOf="@+id/tv_reminder_description_text"
+            tools:text="Hello From Tahrir Square 🎈🎈✨✨🎉" />
+
+        <TextView
+            android:id="@+id/tv_reminder_location_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="32dp"
+            android:fontFamily="@font/archivo_bold"
+            android:text="Reminder Location:"
+            android:textColor="#373535"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="@+id/view_destination"
+            app:layout_constraintTop_toBottomOf="@+id/tv_reminder_description" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="16dp"
+            android:fontFamily="@font/archivo_bold"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:text="@{reminderDataItem.location}"
+            app:layout_constraintEnd_toEndOf="@+id/view_destination"
+            app:layout_constraintStart_toStartOf="@+id/view_destination"
+            app:layout_constraintTop_toBottomOf="@+id/tv_reminder_location_text"
+            tools:text="Cairo - Tahrir Square" />
+
+        <TextView
+            android:id="@+id/tv_destination_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:fontFamily="@font/archivo_bold"
+            android:text="You have arrived to your destination"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@+id/iv_destination"
+            app:layout_constraintStart_toStartOf="@+id/iv_destination"
+            app:layout_constraintTop_toBottomOf="@+id/iv_success_check" />
+
+        <ImageView
+            android:id="@+id/iv_success_check"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/iv_destination"
+            app:layout_constraintStart_toStartOf="@+id/iv_destination"
+            app:layout_constraintTop_toBottomOf="@+id/iv_destination"
+            app:srcCompat="@drawable/success_check" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
